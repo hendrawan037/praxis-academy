@@ -1,0 +1,7 @@
+#ubuntu:
+1. update ubutu:
+    sudo apt-get update
+2. upgrade ubuntu:
+    sudo apt-get upgrade
+3. install visual studio code via snap:
+    sudo snap install code --classic

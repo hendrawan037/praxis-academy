@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>01-02</title>
+</head>
+<body>
+    <input id="demo" type="text">
+    <button type="button" onclick="myFunction()">Tes Input</button>
+    <p id="message"></p>
+</body>
+<script>
+    function myFunction(){  
+        var message, x;
+        message = document.getElementById("message");
+        message.innerHTML="";
+        x = document.getElementById("demo").value;
+        try{
+            if(x == "") throw "it is empty";
+            if (isNaN(x)) throw "it not a number";
+            if (x > 10) throw "it is big number";
+            if (x < 5) throw "it is small number";
+        }
+        catch(err){
+            message.innerHTML = "Input " + err;
+        }
+    }
+    
+try{
+    alertt("welcome guest");
+}
+catch(err){
+    alert(err.message);
+}
+</script>
+</html>

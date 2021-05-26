@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    
+</body>
+<script>
+//untuk mempermudah pengguaan dan dapat digunakan kembali, yang dibuat di
+//object.html, harus dirubah menggunakan class, class di ES5 tidak ada
+//adanya di ES6, di ES5 menggunakan function dan kata kunci this
+
+function Person (firstName, lastName){
+    this.firstName = firstName;
+    this.lastName = lastName;
+
+    //method
+    this.fullName = function(){
+        return `${this.firstName} ${this.lastName}`
+    }
+    this.showName = function(){
+        document.write(this.fullName());
+    }
+
+}
+var person1 = new Person("Nurul", "Huda");
+var person2 = new Person("Ajeng", "Kartika");
+person1.showName();
+document.write('</br>');
+person2.showName();
+</script>
+</html>

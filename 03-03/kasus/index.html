@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>Shopping list example</title>
+    <link rel="stylesheet" href="node_modules/bulma/css/bulma.min.css">
+    <style>
+        li {
+            margin-bottom: 10px;
+        }
+
+        li button {
+            font-size: 8px;
+            margin-left: 20px;
+            color: #666;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="notification">
+            <section class="hero is-medium is-primary is-bold">
+                <div class="hero-body">
+                    <div class="container">
+                        <h1 class="title">
+                            My shopping list
+                        </h1>
+                        <h2 class="subtitle">
+                            Input Your List!
+                        </h2>
+                    </div>
+                </div>
+            </section>
+            <div class="field">
+                <label class="label">Enter a new item: </label>
+                <div class="control">
+                    <input class="input is-success" type="text" placeholder="Input Here">
+                </div>
+            </div>
+            <div class="control">
+                <button class="button is-dark">Add Item</button>
+            </div>
+            <div class="content">
+                <ul>
+    
+                </ul>
+            </div>
+        </div>
+    </div>
+
+
+
+    <script>
+        const list = document.querySelector('ul');
+        const input = document.querySelector('input');
+        const button = document.querySelector('button');
+        button.onclick = function () {
+            let myItem = input.value;
+            input.value = '';
+            const listItem = document.createElement('li');
+            const listText = document.createElement('span');
+            const listBtn = document.createElement('button');
+            listItem.appendChild(listText);
+            listText.textContent = myItem;
+            listItem.appendChild(listBtn);
+            listBtn.textContent = 'Delete';
+            list.appendChild(listItem);
+            listBtn.onclick = function (e) {
+                list.removeChild(listItem);
+            }
+            input.focus();
+        }
+    </script>
+</body>
+
+</html>

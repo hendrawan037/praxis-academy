@@ -1,0 +1,14 @@
+Values adalah nilai yang dapat dipumanipulasi dalam javascript
+values terbagi bermacam-macam yaitu numbers, string, boolean dll
+ #number:
+ =>13, 1, 4, 10
+
+ #string:
+ => 'budi', 'rumah', 'tv', 'cjkjk830_fsj'
+
+ #boolean:
+ => true or false
+
+ ada dua value di javascript:
+ -primitive value 
+ -reference value 

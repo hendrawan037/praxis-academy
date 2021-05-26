@@ -1,0 +1,6 @@
+sumber: https://github.com/nodesource/distributions/blob/master/README.md
+# Using Ubuntu
+1. download source binarinya:
+    curl -sL https://deb.nodesource.com/setup_12.x | sudo -E bash -
+2. install node binarinya:
+    sudo apt-get install -y nodejs
